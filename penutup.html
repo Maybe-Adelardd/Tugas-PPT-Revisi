@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Penutup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #156bff, #0bcaff);
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: auto;
+        }
+
+        button {
+            background-color: #4dc1ff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+        .contact-icons i {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #156bff;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #156bff;
+        text-decoration: none;
+        margin: 30px 15px 30px 0;
+        transition: .5s ease;
+        animation: slideLeft 1s ease forwards;
+        animation-delay: calc(.2 * var(--i));
+    }
+    .contact-icons i:hover {
+        background: #156bff;
+        color: #000;
+        box-shadow: 0 0 20px #156bff;
+    }
+    #portofolio-2 {
+    padding: 1px 0;
+    background: transparent;
+    text-align: center;
+}
+.btn {
+    display: block;
+    font-weight: 600;
+    margin-left: 60px;
+    width: fit-content;
+    border: 1px solid #0099ff;
+    box-shadow: 0 0 5px #0ef, 0 0 7px #0ef;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000000;
+    transition: transform 0.4s;
+}
+.btn:hover {
+    background: #0099ff;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Thanks!</h1>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/adelard.tyanmunandar"><i class="fa-brands fa-facebook"></i></a>
+            <a href=" https://x.com/AdelardTm?t=b7KQxNeVzImqxGh5A0Oc2w&s=08"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/larddbae_/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.gg/CdpprsMdra"><i class="fa-brands fa-discord"></i></a>
+        </div>
+        <div id="portofolio-2">
+            <div class="container">
+                <a href="login.html" class="btn">Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

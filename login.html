@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #5d34a6, #3498db);
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .left {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .left .content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .left .rocket {
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .right {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 20px;
+            color: #3498db;
+            border-radius: 20px;
+        }
+
+        .toggle button:hover {
+            background: rgba(52, 152, 219, 0.2);
+        }
+
+        h2 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            pointer-events: none;
+            transition: 0.3s;
+            color: #aaa;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: -20px;
+            left: 10px;
+            font-size: 12px;
+            color: #3498db;
+        }
+
+        .options {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .options .forgot-password {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .options .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #3498db;
+            color: white;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .submit-btn a {
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+        }
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 30px;
+        }
+        .rocket {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                <img src="img/Earth Tech.png" alt="Rocket" class="rocket">
+            </div>
+        </div>
+        <div class="right">
+            <div class="login-box">
+                <div class="toggle">
+                    <button id="signInBtn">Sign In</button>
+                    <button id="signUpBtn">Sign Up</button>
+                </div>
+                <h2>Sign In</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="username" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <br>
+                    
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="options">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <br>
+                    <button type="submit" class="submit-btn"><a href="index.html">Start</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signInBtn').addEventListener('click', function() {
+            document.querySelector('h2').innerText = 'Sign In';
+            document.querySelector('.submit-btn').innerText = 'Sign In';
+        });
+
+        document.getElementById('signUpBtn').addEventListener('click', function() {
+            document.querySelector('h2').innerText = 'Sign Up';
+            document.querySelector('.submit-btn').innerText = 'Sign Up';
+        });
+    </script>
+</body>
+</html>
